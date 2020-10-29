@@ -7,17 +7,184 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageView
+        android:id="@+id/imgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin"
+        android:paddingBottom="@dimen/margin"
+        android:paddingEnd="@dimen/margin_2x"
+        android:paddingStart="@dimen/margin_2x">
+
+        <TextView
+            android:id="@+id/lblBandB"
+            android:textSize="@dimen/lblBandB"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblBandB"/>
+
+        <ImageView
+            android:id="@+id/imgBookmark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitEnd"
+            android:src="@drawable/ic_bookmark"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lblDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:tint="@color/white" />
+        android:text="@string/lblDate"
+        android:paddingLeft="@dimen/margin_2x"/>
 
-    <!-- ESTA VISTA CORRESPONDE A UNA LÍNEA HORIZONTAL -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_2x">
+
+        <Button
+            android:id="@+id/bttRent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:text="@string/bttRent" />
+
+        <Button
+            android:id="@+id/bttBuy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bttBuy"/>
+
+    </LinearLayout>
+
+
+        <!-- ESTA VISTA CORRESPONDE A UNA LÍNEA HORIZONTAL -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_2x"
+        android:paddingStart="@dimen/margin_3x"
+        android:paddingEnd="@dimen/margin_3x">
+
+        <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbttRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:src="@drawable/ic_baseline_edit_24"
+            app:tint="@color/white"/>
+
+        <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbttFamily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:src="@drawable/ic_family"
+            app:tint="@color/white"/>
+
+        <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbttPercentage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:src="@drawable/tomato"
+            app:tint="@color/white"/>
+
+        <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbttSimilar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:src="@drawable/ic_similar"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin">
+
+        <TextView
+            android:id="@+id/lblRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_2x"
+            android:text="@string/lblRating"
+            android:paddingLeft="@dimen/margin_2x"/>
+
+        <TextView
+            android:id="@+id/lblFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:text="@string/lblFamily"
+            android:paddingLeft="@dimen/margin_2x"/>
+
+        <TextView
+            android:id="@+id/lblPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:layout_marginEnd="@dimen/margin_3x"
+            android:text="@string/lblPercentage"
+            android:paddingLeft="@dimen/margin_2x"/>
+
+        <TextView
+            android:id="@+id/lblSimilar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2x"
+            android:text="@string/lblSimilar"
+            android:paddingLeft="@dimen/margin_2x"/>
+
+    </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/gray_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_2x">
+
+        <TextView
+            android:id="@+id/lblStory"
+            android:textSize="@dimen/lblStory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblStory"/>
+
+    </LinearLayout>
 
 </LinearLayout>

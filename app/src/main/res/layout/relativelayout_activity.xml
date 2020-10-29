@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:id="@+id/lblBandB"
+        android:textSize="@dimen/lblBandB"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgHeader"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/lblBandB"/>
+
+    <ImageView
+        android:id="@+id/imgBookmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/lblBandB"
+        android:layout_alignBottom="@+id/lblBandB"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:scaleType="fitEnd"
+        android:src="@drawable/ic_bookmark"/>
+
+    <TextView
+        android:id="@+id/lblDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblDate"
+        android:layout_below="@+id/lblBandB"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:paddingLeft="@dimen/margin_2x"/>
+
+    <Button
+        android:id="@+id/bttRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_3x"
+        android:paddingEnd="@dimen/margin_3x"
+        android:layout_below="@+id/lblDate"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="@string/bttRent" />
+
+    <Button
+        android:id="@+id/bttBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_3x"
+        android:paddingEnd="@dimen/margin_3x"
+        android:layout_toRightOf="@+id/bttRent"
+        android:layout_alignBottom="@+id/bttRent"
+        android:text="@string/bttBuy"/>
+
+
+    <!-- ESTA VISTA CORRESPONDE A UNA LÍNEA HORIZONTAL -->
+    <View
+        android:id="@+id/viewLineButtons"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/bttRent"
+        android:background="@color/gray_divider" />
+
+    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbttRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewLineButtons"
+        android:layout_marginStart="@dimen/margin_3x"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin_3x"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:tint="@color/white"/>
+
+    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbttFamily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/fbttRating"
+        android:layout_alignBottom="@+id/fbttRating"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin_3x"
+        android:src="@drawable/ic_family"
+        app:tint="@color/white"/>
+
+    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbttPercentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/fbttFamily"
+        android:layout_alignBottom="@+id/fbttFamily"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin_3x"
+        android:src="@drawable/tomato"
+        app:tint="@color/white"/>
+
+    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbttSimilar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/fbttPercentage"
+        android:layout_alignBottom="@+id/fbttPercentage"
+        android:layout_marginStart="@dimen/margin"
+        android:src="@drawable/ic_similar"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/lblRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fbttRating"
+        android:layout_marginBottom="@dimen/margin_2x"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:text="@string/lblRating"
+        android:paddingLeft="@dimen/margin_2x"/>
+
+    <TextView
+        android:id="@+id/lblFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lblRating"
+        android:layout_alignBottom="@+id/lblRating"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin_3x"
+        android:text="@string/lblFamily"
+        android:paddingLeft="@dimen/margin_2x"/>
+
+    <TextView
+        android:id="@+id/lblPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lblFamily"
+        android:layout_alignBottom="@+id/lblFamily"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginEnd="@dimen/margin_3x"
+        android:text="@string/lblPercentage"
+        android:paddingLeft="@dimen/margin_2x"/>
+
+    <TextView
+        android:id="@+id/lblSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/lblPercentage"
+        android:layout_alignBottom="@+id/lblPercentage"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:text="@string/lblSimilar"
+        android:paddingLeft="@dimen/margin_2x"/>
+
+    <View
+        android:id="@+id/ViewFloatButtonsLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/lblRating"
+        android:background="@color/gray_divider" />
+
+    <TextView
+        android:id="@+id/lblStory"
+        android:textSize="@dimen/lblStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ViewFloatButtonsLine"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:text="@string/lblStory"/>
+
+</RelativeLayout>
